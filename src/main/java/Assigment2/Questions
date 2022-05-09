@@ -1,0 +1,63 @@
+Assignment 2
+1.	Why we need packages in java?
+A package in Java is used to group related classes. Think of it as a folder in a file directory. We use packages to
+ avoid name conflicts, and to write a better maintainable code.
+
+2.	What is the default imported package?
+J ava compiler imports java.lang package internally by default.
+
+3.	What is Class? What is Object?
+- A class is a user defined blueprint or prototype from which objects are created.  It represents the set of properties or
+ methods that are common to all objects of one type
+- Object -- an encapsulation of data along with functions that act upon that data.
+  An object consists of:
+  Name -- the variable name we give it
+  Member data -- the data that describes the object
+  Member functions -- behavior aspects of the object (functions related to the object itself)
+
+4.	Why we need constructor?
+- A constructor is a special method of a class that initializes new objects or instances of the class.
+Without a constructor, you can't create instances of the class
+
+5.	What is the default value of local variable? What is the default value of instance variable?
+- There is no default value for local variables
+- Instance variables have default values. For numbers, the default value is 0, for Booleans it is false, and for object
+references it is null. Values can be assigned during the declaration or within the constructor.
+
+6.	What is garbage collection?
+garbage collection (GC) in the Java virtual machine (JVM) to automatically determine what memory is no longer being used
+ by a Java application and to recycle this memory for other uses.
+
+7.	The protected data can be accessed by subclasses or same package. True or false?
+- True
+
+8.	What is immutable class?
+- Immutable class in java means that once an object is created, we cannot change its content
+
+9.	What’s the difference between “==” and equals method?
+- == checks if both objects point to the same memory location whereas . equals() evaluates to the comparison of values in
+the objects
+
+10.	What is wrapper class?
+Wrapper classes provide a way to use primitive data types (int, boolean, etc..) as objects.
+
+11.	What is autoboxing?
+Autoboxing is the automatic conversion that the Java compiler makes between the primitive types and their corresponding
+ object wrapper classes. For example, converting an int to an Integer, a double to a Double, and so on. If the
+ conversion goes the other way, this is called unboxing.
+
+12.	StringBuilder is threadsafe but slower than StringBuffer, true or false?
+- False. StringBuilder is not threadsafe and faster than StringBuffer
+
+13.	Constructor can be inherited, true or false?
+Constructors are not members, so they are not inherited by subclasses, but the constructor of the superclass can be
+invoked from the subclass
+
+14.	How to call a super class’s constructor?
+Use of super() to access superclass constructor. As we know, when an object of a class is created, its default
+constructor is automatically called. To explicitly call the superclass constructor from the subclass constructor,
+we use super() .
+
+15.	Which class is the super class of all classes?
+The class named Object is the super class of every class in Java.
+

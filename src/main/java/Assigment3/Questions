@@ -1,0 +1,75 @@
+Assignment 3
+1.	Explain polymorphism.
+the ability of a message to be displayed in more than one form
+
+2.	What is overloading?
+- same name different parameters type or number
+
+3.	What is overriding?
+- Overriding is a feature that allows a subclass or child class to provide a specific implementation of a method that
+is already provided by one of its super-classes or parent classes.
+- same signature, same name, same return type
+
+4.	What does the final mean in this method:  public void doSomething(final Car aCar){}
+- the use of final for the arguments in those methods means it won't allow the programmer to change their value during
+ the execution of the method. This only means that inside the method the final variables can not be reassigned.
+
+5.	Suppose in question 4, the Car class has a method setColor(Color color){…}, inside doSomething method,
+ Can we call aCar.setColor(red);?
+ -yes
+
+6.	Can we declare a static variable inside a method?
+- yes
+
+7.	What is the difference between interface and abstract class?
+Abstract classes are similar to interfaces. You cannot instantiate them, and they may contain a mix of methods
+declared with or without an implementation. However, with abstract classes, you can declare fields that are not static
+and final, and define public, protected, and private concrete methods. With interfaces, all fields are automatically
+public, static, and final, and all methods that you declare or define (as default methods) are public.
+In addition, you can extend only one class, whether or not it is abstract, whereas you can implement any number of
+interfaces.
+
+
+8.	Can an abstract class be defined without any abstract methods?
+An abstract class is a class that is declared abstract—it may or may not include abstract methods.
+Abstract classes cannot be instantiated, but they can be subclassed.
+
+9.	Since there is no way to create an object of abstract class, what’s the point of constructors of abstract class?
+The main purpose of the constructor is to initialize the newly created object.
+In abstract class, we have an instance variable, abstract methods, and non-abstract methods.
+We need to initialize the non-abstract methods and instance variables, therefore abstract classes have a constructor.
+
+10.	What is a native method?
+Native methods are Java™ methods that start in a language other than Java.
+Native methods can access system-specific functions and APIs that are not available directly in Java.
+The use of native methods limits the portability of an application, because it involves system-specific code.
+
+11.	What is marker interface?
+A marker interface is an interface that has no methods or constants inside it. It provides run-time type information
+ about objects, so the compiler and JVM have additional information about the object
+
+12.	Why to override equals and hashCode methods?
+- we need to override hashCode if we override equals because if not we break the contract that 2 objects are equal
+will have to same hashCode
+
+13.	What’s the difference between int and Integer?
+int is a primitive data type while Integer is a Wrapper class. int, being a primitive data type has got less
+flexibility. We can only store the binary value of an integer in it. Since Integer is a wrapper class for int data type,
+it gives us more flexibility in storing, converting and manipulating an int data
+
+14.	What is serialization?
+Serialization in Java is the process of converting the Java code Object into a Byte Stream, to transfer the Object Code
+from one Java Virtual machine to another and recreate it using the process of Deserialization
+
+15.	Create List and Map. List A contains 1,2,3,4,10(integer) .
+Map B contains ("a","1") ("b","2") ("c","10")
+(key = string, value = string)
+Question: get a list which contains all the elements in list A, but not in map B.
+
+16.	Implement a group of classes that have common behavior/state as Shape.
+ Create Circle, Rectangle and Square for now as later on we may need more shapes. T
+ hey should have the ability to calculate the area. They should be able to compare using area.
+ Please write a program to demonstrate the classes and comparison.  You can use either abstract or interface.
+ Comparator or Comparable interface.
+
+

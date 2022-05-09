@@ -1,0 +1,78 @@
+1. What is JDK?JVM?JRE?
+- JDK is Java Development Kit. It is a software development environment used for developing Java applications
+and applets. It includes the Java Runtime Environment (JRE), an interpreter/loader (Java), a compiler (javac),
+an archiver (jar), a documentation generator (Javadoc), and other tools needed in Java development.
+- JRE is Java Runtime Environment. It provides the minimum requirements for executing a Java
+ application; it consists of the Java Virtual Machine (JVM), core classes, and supporting files
+- JVM is Java Virtual Machine: acts as a run-time engine to run Java applications.
+JVM is the one that actually calls the main method present in a java code.
+JVM is a part of JRE(Java Runtime Environment). is a program that interprets the intermediate Java byte code and
+generates the desired output
+
+2.	What is java compiler?
+- Just in time compiler converts the Java bytecode into machine language code, which then gets executed by the JVM.
+
+3.	Why is java platform independent?
+Java programming language does not depend on any particular hardware or software because it is compiled by the compiler
+and then converted into byte code. Byte code is platform-independent and can run on multiple systems. The only
+requirement is Java needs a runtime environment, i.e., JRE, which is a set of tools used for developing Java applications.
+
+4.	What is IDE? Why is it important for developers?
+- IDE is Independent Development Environment
+- A Java IDE is a software that allows Java developers to easily write as well as debug Java programs.
+It is basically a collection of various programming tools, accessible via a single interface, and several helpful
+features, such as code completion and syntax highlighting. Codenvy, Eclipse, and NetBeans are some of the most popular
+Java IDEs.
+
+5.	Is java case sensitive?
+- Java is case sensitive
+
+6.	What do the following key words do?
+- static: The static keyword is used to create variables/method that will exist independently of any instances
+created for the class
+- final: can be explicitly initialized only once., cannot be overridden by any subclasses,
+prevent the class from being subclassed
+- public:  can be accessed from any other class, can be accessed from any class belonging to the Java Universe.
+- private: an only be accessed within the declared class itself
+- void: no return type method
+- null:  is a reserved word for literal values.
+- package: It declares a 'name space' for the Java class. It must be put at the top of the Java file, it should be
+the first Java statement line
+- Class: is used to declare a new Java class, which is a collection of related variables and/or methods. Classes are the
+ basic building blocks of object−oriented programming.
+- new: is used to create an instance of the class. In other words, it instantiates a class by allocating memory for a
+ new object and returning a reference to that memory.
+
+7.	What is primitive type and reference type?
+- primitive type: int, boolean, char, short, float, long and double
+- reference type: used to point objects e.g. String, Thread, File, and others. Reference variables are not pointers but
+a handle to the object which is created in heap memory. The main difference between primitive and reference type is that
+ primitive type always has a value, it can never be null but reference type can be null, which denotes the absence of
+  value.
+
+8.	Is parameter passed by value or reference?
+Java always passes arguments by value, NOT by reference.
+
+9.	What is the output: System.out.println(1 > 0 : “A”:”B”);
+- this line has error, so compiler can't run
+
+10.	How to define constants in java?
+- A constant is a variable whose value cannot change once it has been assigned.
+Java doesn't have built-in support for constants.
+- use final keyword
+
+11.	What is String? Is it primitive type?
+- The string data type is a non-primitive data type
+
+12.	How to check if a String is representing a number?
+- Java's built-in methods:
+  Integer.parseInt(String)
+  Float.parseFloat(String)
+  Double.parseDouble(String)
+  Long.parseLong(String)
+  new BigInteger(String)
+- use regex -?\d+(\.\d+)? to match numeric Strings consisting of the positive or negative integer and floats.
+- methods available in the Apache Commons library.
+ NumberUtils.isCreatable(String)
+ NumberUtils.isParsable(String)
+ StringUtils.isNumeric(CharSequence)

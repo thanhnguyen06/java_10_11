@@ -1,0 +1,98 @@
+Assignment 4
+1. What’s the difference between final, finally? What is finalize()?
+- The basic difference between final, finally and finalize is that the final is an access modifier,
+finally is the block in Exception Handling and finalize is the method of object class.
+- The Finalize method is used to perform cleanup operations on unmanaged resources held by the current object
+ before the object is destroyed. The method is protected and therefore is accessible only through this class or
+ through a derived class
+
+2. What’s the difference between throw and throws?
+Both throw and throws are the concepts of exception handing in which throw is used to explicitly throw an exception
+from a method or any block of code while throws are used in the signature of the method to indicate that this method
+might throw one of the listed type exceptions
+
+3. What are the two types of exceptions?
+- checked exception: The classes that directly inherit the Throwable class except RuntimeException and Error are known
+ as checked exceptions. For example, IOException, SQLException, etc. Checked exceptions are checked at compile-time.
+- unchecked exception: The classes that inherit the RuntimeException are known as unchecked exceptions. For example,
+ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException, etc. Unchecked exceptions are not checked
+at compile-time, but they are checked at runtime.
+
+4. What is error in java?
+-  an error is a subclass of Throwable that tells that something serious problem is existing and a reasonable
+Java application should not try to catch that error.
+
+5. Exception is object, true or false?
+- In Java, exceptions are objects. When you throw an exception, you throw an object
+
+6. Can a finally block exist with a try block but without a catch?
+- Yes, It is possible to have a try block without a catch block by using a final block
+
+7. From java 1.7, give an example of the try-resource feature.
+- static String readFirstLineFromFile(String path) throws IOException {
+  	    try (FileReader fr = new FileReader(path);
+  	         BufferedReader br = new BufferedReader(fr)) {
+  	        return br.readLine();
+  	    }
+  	}
+
+8. What will happen to the Exception object after exception handling?
+ - The Exception object will be garbage collected in the next garbage collection
+
+9. Can we use String as a condition in switch(str){} clause?
+- A switch statement allows a variable to be tested for equality against a list of values.
+ Each value is called a case, and the variable being switched on is checked for each case.
+
+10. What’s the difference between ArrayList, LinkedList and vector?
+- ArrayList in java, uses dynamic arrays to store its elements and maintains insertion order. ArrayList can store
+ duplicate elements. It is a non synchronized collection type. ArrayList class extends AbstractList and implements
+ the List, RandomAccess, Cloneable, Serializable interfaces.
+ - LinkedList in java, uses linked list data structure as it’s internal implementation to store elements.
+ It can store duplicate elements. LinkedList class extends AbstractSequentialList and implements the List, Deque,
+  Cloneable, Serializable interfaces. Like ArrayList, LinkedList is also not synchronized.
+  - Vector class in java, implements a growable or dynamic array of objects. Similar to an array, Vector contains
+  components which can be accessed using an integer index. After the Vector creation, the size of a Vector can grow
+  or shrink as needed to accommodate adding and removing elements. Vector extends AbstractList and implements List,
+   RandomAccess, Cloneable, Serializable interfaces.
+
+11. What’s the difference between hashTable and hashMap?
+HashMap is non-synchronized. It is not thread-safe and can’t be shared between many threads without proper
+synchronization code whereas Hashtable is synchronized. It is thread-safe and can be shared with many threads.
+HashMap allows one null key and multiple null values whereas Hashtable doesn’t allow any null key or value.
+HashMap is generally preferred over HashTable if thread synchronization is not needed.
+
+12. What is static import?
+- static import concept is introduced in 1.5 version. With the help of static import, we can access the static
+ members of a class directly without class name or any object. For Example: we always use sqrt() method of Math class
+ by using Math class i.e. Math.sqrt(), but by using static import we can access sqrt() method directly.
+
+13. What is static block?
+- In a Java class, a static block is a set of instructions that is run only once when a class is loaded into memory.
+ A static block is also called a static initialization block.
+
+14. Explain the keywords:
+- default(java 1.8): available to any other class in the same package
+- break:  It is used to terminate loops and switch statements in java. When the break keyword is encountered within
+a loop, the loop is immediately terminated and the program control goes to the next statement following the loop
+- continue: The continue keyword is used to end the current iteration in a for loop (or a while loop),
+ and continues to the next iteration.
+- synchronized: The synchronized keyword used to indicate that a method can be accessed by only one thread at a time.
+The synchronized modifier can be applied with any of the four access level modifiers.
+ - strictfp:  used in java for restricting floating-point calculations and ensuring the same result on every platform
+ while performing operations in the floating-point variable.
+ - transient: An instance variable is marked transient to indicate the JVM to skip the particular variable when
+ serializing the object containing it.
+ - volatile: The volatile modifier is used to let the JVM know that a thread accessing the variable must always merge
+its own private copy of the variable with the master copy in the memory. Accessing a volatile variable synchronizes all
+the cached copied of the variables in the main memory. Volatile can only be applied to instance variables, which are of
+type object or private. A volatile object reference can be null.
+ - instanceOf: It is a binary operator used to test if an object (instance) is a subtype of a given Type.
+ It returns either true or false. It returns true if the left side of the expression is an instance of the class
+  name on the right side.
+
+15. Create a program including two threads – thread read and thread write.
+Input file ->Thread read -> Calculate -> buffered area
+Buffered area -> Thread write -> output file
+Detailed description is in assignment4.txt file.
+Sample input.txt file.
+Attached files are input.txt and a more detailed description file.
